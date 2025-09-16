@@ -6,16 +6,13 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* Navigation Header */}
       <nav className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
             <div className="text-2xl font-bold text-gray-900">
               Phaton
             </div>
 
-            {/* Navigation Links - Desktop */}
             <div className="hidden md:flex space-x-8">
               <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Home
@@ -28,9 +25,7 @@ export default function AboutPage() {
               </a>
             </div>
 
-            {/* Right Side - User Profile & Hamburger */}
             <div className="flex items-center">
-              {/* Hamburger Menu Button - Mobile (Move to left) */}
               <div className="md:hidden mr-4">
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -72,7 +67,7 @@ export default function AboutPage() {
                 </button>
               </div>
 
-              {/* User Profile */}
+           
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm font-medium">U</span>
@@ -85,7 +80,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Mobile Menu */}
+      
           {isMenuOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
@@ -111,7 +106,7 @@ export default function AboutPage() {
                   Privacy
                 </a>
                 
-                {/* Mobile User Profile */}
+              
                 <div className="flex items-center space-x-3 px-3 py-3 mt-3 border-t border-gray-200">
                   <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
                     <span className="text-white font-medium">U</span>
@@ -127,9 +122,8 @@ export default function AboutPage() {
         </div>
       </nav>
 
-      {/* Main Section */}
+   
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        {/* Heading */}
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-4">
             About Us
@@ -143,9 +137,8 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Two-Column Layout */}
+  
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Left Side - Info Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
   {[
     {
@@ -178,7 +171,7 @@ export default function AboutPage() {
 </div>
 
 
-          {/* Right Side - Images */}
+          
           <div className="grid grid-cols-2 gap-4">
   {[
     "https://images.pexels.com/photos/28948225/pexels-photo-28948225/free-photo-of-hand-holding-e-reader-displaying-text-on-yellow-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -206,4 +199,5 @@ export default function AboutPage() {
       <Footer />
     </div>
   );
+
 }
