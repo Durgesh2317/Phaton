@@ -30,7 +30,6 @@ export default function Header() {
     else if (page === "checkout-confirmation") setShowConfirmationPage(true);
   }, []);
 
-  // Handlers
   const handleAboutPageClick = () => {
     resetPages();
     setShowAboutPage(true);
@@ -82,7 +81,6 @@ export default function Header() {
     window.history.pushState({}, "", "?page=checkout-confirmation");
   };
 
-  // Helper to reset all
   const resetPages = () => {
     setShowAboutPage(false);
     setShowProductPage(false);
@@ -96,10 +94,8 @@ export default function Header() {
     <>
       <header className="border-b border-gray-200 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
           <div className="text-2xl font-extrabold tracking-tight">Phaton</div>
 
-          {/* Desktop Search */}
           <div className="hidden md:flex flex-1 justify-center">
             <div className="flex items-center w-full max-w-xl bg-gray-100 rounded-full px-4 py-2 gap-3 shadow-sm">
               <svg
@@ -122,7 +118,6 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-2 flex-shrink-0">
             <button
               onClick={handleAboutPageClick}
@@ -170,7 +165,6 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* Mobile Toggle */}
           <button
             className="md:hidden text-gray-700 text-2xl"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -179,7 +173,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200 shadow-md px-4 py-4 space-y-4">
             <button
@@ -210,7 +203,6 @@ export default function Header() {
         )}
       </header>
 
-      {/* Page Overlays */}
       {showAboutPage && (
         <div className="fixed inset-0 z-50 bg-white overflow-hidden">
           <div className="absolute top-4 right-4 z-10">
