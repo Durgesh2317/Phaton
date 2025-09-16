@@ -80,22 +80,18 @@ export default function DescriptionPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* Topbar */}
       <header className="flex items-center justify-between px-4 md:px-8 py-4 border-b sticky top-0 bg-white z-10">
         <h1 className="font-bold text-xl text-[#1e3a5f]">Phaton</h1>
       </header>
 
-      {/* Breadcrumb */}
       <div className="px-4 md:px-8 py-3 text-xs md:text-sm text-gray-600 flex gap-2 flex-wrap">
         <span className="hover:text-[#1e3a5f] cursor-pointer">Home</span>
         <span>/</span>
         <span className="text-gray-800 font-medium">Product details</span>
       </div>
 
-      {/* Main Section */}
       <main className="flex-1 px-4 md:px-8 lg:px-20 py-6">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Left: Product Image */}
           <div className="flex-1 flex flex-col items-start">
             <img
               src={activeProduct.image}
@@ -120,13 +116,11 @@ export default function DescriptionPage() {
             </div>
           </div>
 
-          {/* Right: Product Info */}
           <div className="flex-1 flex flex-col gap-5">
             <span className="text-xs bg-gray-100 px-3 py-1 rounded-full w-fit font-medium">
               {activeProduct.category}
             </span>
 
-            {/* Title + Share Button */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
                 {activeProduct.title}
@@ -162,7 +156,6 @@ export default function DescriptionPage() {
               </p>
             </div>
 
-            {/* Action Buttons */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
               <button className="flex items-center justify-center px-4 py-3 min-h-[56px] rounded-lg border border-gray-400 bg-white text-sm md:text-base text-gray-800 hover:bg-gray-200 transition w-full">
                 Buy
@@ -179,7 +172,6 @@ export default function DescriptionPage() {
           </div>
         </div>
 
-        {/* Related Products */}
         <section className="mt-16">
           <h3 className="text-lg md:text-xl font-semibold mb-6">
             You might also like
@@ -215,3 +207,4 @@ export default function DescriptionPage() {
     </div>
   );
 }
+
