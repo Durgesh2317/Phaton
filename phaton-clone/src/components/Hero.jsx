@@ -13,7 +13,6 @@ export default function Hero() {
   return (
     <section className="max-w-7xl mx-auto px-4 lg:px-6 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Left Hero Text */}
         <div className="bg-lavender-2 rounded-2xl p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] lg:min-h-[460px] 
                         transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
@@ -26,9 +25,7 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Middle Grid */}
         <div className="grid gap-6">
-          {/* Image Box */}
           <div className="rounded-2xl overflow-hidden w-full h-56 sm:h-64 md:h-80 lg:h-[360px] group transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
             <Img
               src="https://m.media-amazon.com/images/I/41vf2JjwJMS.jpg"
@@ -36,7 +33,6 @@ export default function Hero() {
             />
           </div>
 
-          {/* Text Box */}
           <div className="rounded-2xl bg-lavender min-h-[200px] sm:min-h-[250px] md:min-h-[280px] lg:min-h-[310px] p-6 md:p-10 grid place-items-center
                           transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
             <div className="text-center">
@@ -47,7 +43,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Grid */}
         <div className="grid gap-6">
           <div className="rounded-2xl overflow-hidden h-40 sm:h-48 md:h-56 lg:h-[220px] group 
                           transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
@@ -66,7 +61,6 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-auto sm:h-40 md:h-48 lg:h-[220px]">
-            {/* Text Box */}
             <div className="rounded-2xl bg-lavender-2 p-6 md:p-8 grid place-items-center
                             transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
               <div className="text-center space-y-1">
@@ -76,7 +70,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Image Box */}
             <div className="rounded-2xl overflow-hidden group 
                             transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
               <Img
