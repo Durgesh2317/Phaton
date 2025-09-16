@@ -30,7 +30,7 @@ import {
 export default function AnalyticsDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Dummy Data
+
   const revenueData = [
     { month: "Jan", revenue: 20000 },
     { month: "Feb", revenue: 25000 },
@@ -65,7 +65,7 @@ export default function AnalyticsDashboard() {
 
   return (
     <div className="flex bg-gray-100">
-      {/* Sidebar Overlay (mobile) */}
+   
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 z-20 lg:hidden"
@@ -73,7 +73,7 @@ export default function AnalyticsDashboard() {
         ></div>
       )}
 
-      {/* Sidebar */}
+    
       <aside
         className={`fixed inset-y-0 left-0 z-30 w-64 bg-[#1F3446] text-white transform 
         ${sidebarOpen ? "translate-x-0" : "-translate-x-64"} 
@@ -120,9 +120,8 @@ export default function AnalyticsDashboard() {
         </nav>
       </aside>
 
-      {/* Main content */}
+ 
       <div className="flex-1 flex flex-col lg:ml-64 min-h-screen overflow-y-auto">
-        {/* Topbar */}
         <header className="flex items-center justify-between bg-white h-16 px-4 shadow-md sticky top-0 z-10">
           <div className="flex items-center gap-3">
             <button
@@ -137,7 +136,6 @@ export default function AnalyticsDashboard() {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* Search (hidden on very small screens) */}
             <div className="relative hidden sm:block">
               <input
                 type="text"
@@ -156,7 +154,6 @@ export default function AnalyticsDashboard() {
                 <span className="block font-semibold text-sm sm:text-base">
                   Divine I.
                 </span>
-                {/* Email hidden on mobile */}
                 <span className="text-xs font-light text-gray-400 hidden sm:block">
                   divinei**@phaton.com
                 </span>
@@ -165,13 +162,13 @@ export default function AnalyticsDashboard() {
           </div>
         </header>
 
-        {/* Content */}
+ 
         <main className="p-4 sm:p-6 lg:p-8">
           <h2 className="text-gray-700 mb-4">
             Comprehensive business insights and performance metrics
           </h2>
 
-          {/* Stats Cards */}
+        
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             {[
               { title: "Total Sales", value: "$127,435", change: "+12%" },
@@ -198,9 +195,8 @@ export default function AnalyticsDashboard() {
             ))}
           </section>
 
-          {/* Charts Row */}
+          
           <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-            {/* Revenue Line Chart */}
             <div className="bg-white p-4 rounded-xl shadow lg:col-span-2">
               <h3 className="font-semibold mb-2">Revenue & Customer Growth</h3>
               <ResponsiveContainer width="100%" height={250}>
@@ -220,7 +216,7 @@ export default function AnalyticsDashboard() {
               </ResponsiveContainer>
             </div>
 
-            {/* Category Pie */}
+          
             <div className="bg-white p-4 rounded-xl shadow">
               <h3 className="font-semibold mb-2">Categories Performance</h3>
               <ResponsiveContainer width="100%" height={250}>
@@ -242,7 +238,7 @@ export default function AnalyticsDashboard() {
             </div>
           </section>
 
-          {/* Category Bar Chart */}
+       
           <section className="bg-white p-4 rounded-xl shadow mb-8">
             <h3 className="font-semibold mb-2">
               Category Performance Analysis
@@ -262,3 +258,4 @@ export default function AnalyticsDashboard() {
     </div>
   );
 }
+
