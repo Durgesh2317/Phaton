@@ -41,7 +41,6 @@ export default function DashboardOrder() {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      {/* Overlay for mobile */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 z-20 lg:hidden"
@@ -49,7 +48,6 @@ export default function DashboardOrder() {
         ></div>
       )}
 
-      {/* Sidebar */}
       <aside
         className={`fixed inset-y-0 left-0 z-30 w-64 bg-[#1F3446] text-white transform 
         ${sidebarOpen ? "translate-x-0" : "-translate-x-64"} 
@@ -90,9 +88,7 @@ export default function DashboardOrder() {
         </nav>
       </aside>
 
-      {/* Main Content */}
       <div className="flex-1 flex flex-col lg:ml-64 overflow-hidden">
-        {/* Topbar */}
         <header className="flex items-center justify-between bg-white h-16 px-4 shadow-md sticky top-0 z-10">
           <div className="flex items-center gap-3">
             <button
@@ -104,9 +100,7 @@ export default function DashboardOrder() {
             <h1 className="text-xl font-semibold">Order Management</h1>
           </div>
 
-          {/* Right side */}
           <div className="flex items-center gap-4">
-            {/* Search (hidden on very small screens) */}
             <div className="relative hidden sm:block">
               <input
                 type="text"
@@ -118,14 +112,13 @@ export default function DashboardOrder() {
               <Search className="absolute top-2 left-3 text-gray-400" size={18} />
             </div>
 
-            {/* Notification + User Info */}
             <div className="flex items-center gap-2">
               <Bell size={22} className="text-gray-600 cursor-pointer" />
               <div className="leading-tight">
                 <span className="block font-semibold text-sm sm:text-base">
                   Divine I.
                 </span>
-                {/* Email hidden on mobile */}
+                
                 <span className="text-xs font-light text-gray-400 hidden sm:block">
                   divinei**@phaton.com
                 </span>
@@ -134,9 +127,7 @@ export default function DashboardOrder() {
           </div>
         </header>
 
-        {/* Content */}
         <main className="flex-1 overflow-y-auto p-6">
-          {/* Stats */}
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
             {[
               { label: "Total Orders", value: 2847 },
@@ -151,9 +142,8 @@ export default function DashboardOrder() {
             ))}
           </section>
 
-          {/* Orders Table */}
+
           <section className="mt-8 bg-white rounded shadow p-6 overflow-x-auto">
-            {/* Table */}
             <table className="min-w-[620px] w-full text-left text-sm border-collapse table-auto">
               <thead>
                 <tr className="bg-gray-100 border-b">
@@ -185,7 +175,6 @@ export default function DashboardOrder() {
               </tbody>
             </table>
 
-            {/* Pagination */}
             <div className="flex justify-end mt-4 gap-2 select-none">
               {[1, 2, 3].map((page) => (
                 <button
@@ -207,3 +196,4 @@ export default function DashboardOrder() {
     </div>
   );
 }
+
