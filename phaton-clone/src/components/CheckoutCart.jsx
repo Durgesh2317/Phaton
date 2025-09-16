@@ -86,7 +86,6 @@ const CheckoutCart = ({ onNext, onClose }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -101,7 +100,7 @@ const CheckoutCart = ({ onNext, onClose }) => {
         </div>
       </div>
 
-      {/* Breadcrumb */}
+     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center space-x-2 text-sm text-gray-600">
           <span className="text-xl">🛒</span>
@@ -110,7 +109,7 @@ const CheckoutCart = ({ onNext, onClose }) => {
         </div>
       </div>
 
-      {/* Progress Steps */}
+     
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 mb-8">
   <div className="flex items-center justify-between flex-wrap">
     {["Cart", "Information", "Payment", "Confirmation"].map((step, i) => {
@@ -118,15 +117,12 @@ const CheckoutCart = ({ onNext, onClose }) => {
       let textClasses = "";
 
       if (i === 0) {
-        // Cart -> Active dark
         circleClasses = "bg-gray-800 text-white";
         textClasses = "text-gray-900 font-medium";
       } else if (i === 1) {
-        // Information -> Gray-200
         circleClasses = "bg-gray-200 text-gray-900";
         textClasses = "text-gray-900 font-medium";
       } else {
-        // Rest -> Inactive
         circleClasses = "bg-gray-300 text-gray-600";
         textClasses = "text-gray-600";
       }
@@ -150,10 +146,7 @@ const CheckoutCart = ({ onNext, onClose }) => {
 </div>
 
 
-
-      {/* Main Content + Order Summary */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8">
-        {/* Main Content */}
         <div className="flex-1 flex flex-col">
           <div className="bg-white border border-gray-300 rounded-lg shadow-sm p-6 mb-8">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
@@ -175,7 +168,7 @@ const CheckoutCart = ({ onNext, onClose }) => {
             </div>
           </div>
 
-          {/* Mobile Order Summary */}
+       
           <div className="lg:hidden mb-6">
             <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-400">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -226,7 +219,6 @@ const CheckoutCart = ({ onNext, onClose }) => {
           </div>
 </div>
          
-{/* Right Sidebar Desktop */}
         <div className="hidden lg:block lg:w-80 flex-shrink-0">
           <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-400 top-24">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Order Summary</h3>
@@ -251,11 +243,10 @@ const CheckoutCart = ({ onNext, onClose }) => {
         </div>
       </div>
 
-      {/* Recommendations */}
+    
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-24">
   <h2 className="text-xl font-semibold text-gray-900 mb-6">Recommendation</h2>
   <div className="relative">
-    {/* Slider wrapper */}
     <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
       {getCurrentItems().map((item) => (
         <div
@@ -284,10 +275,10 @@ const CheckoutCart = ({ onNext, onClose }) => {
   </div>
 </div>
 
-
       <Footer />
     </div>
   );
 };
 
 export default CheckoutCart;
+
