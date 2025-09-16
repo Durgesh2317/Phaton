@@ -50,7 +50,7 @@ const Input = ({ className, ...props }) => (
   />
 );
 
-// Dummy Label + Switch
+
 const Label = ({ children }) => (
   <label className="block text-sm font-medium mb-1">{children}</label>
 );
@@ -65,7 +65,6 @@ export default function SettingsPage() {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      {/* Sidebar */}
       {sidebarOpen && (
               <div
                 className="fixed inset-0 bg-black bg-opacity-40 z-20 lg:hidden"
@@ -73,7 +72,6 @@ export default function SettingsPage() {
               ></div>
             )}
       
-            {/* Sidebar */}
             <aside
               className={`fixed inset-y-0 left-0 z-30 w-64 bg-[#1F3446] text-white transform 
               ${sidebarOpen ? "translate-x-0" : "-translate-x-64"} 
@@ -120,9 +118,7 @@ export default function SettingsPage() {
               </nav>
             </aside>
 
-      {/* Main content */}
             <div className="flex-1 flex flex-col lg:ml-64 min-h-screen overflow-y-auto">
-              {/* Topbar */}
               <header className="flex items-center justify-between bg-white h-16 px-4 shadow-md sticky top-0 z-10">
                 <div className="flex items-center gap-3">
                   <button
@@ -137,7 +133,6 @@ export default function SettingsPage() {
                 </div>
       
                 <div className="flex items-center gap-4">
-                  {/* Search (hidden on very small screens) */}
                   <div className="relative hidden sm:block">
                     <input
                       type="text"
@@ -156,7 +151,7 @@ export default function SettingsPage() {
                       <span className="block font-semibold text-sm sm:text-base">
                         Divine I.
                       </span>
-                      {/* Email hidden on mobile */}
+          
                       <span className="text-xs font-light text-gray-400 hidden sm:block">
                         divinei**@phaton.com
                       </span>
@@ -165,7 +160,6 @@ export default function SettingsPage() {
                 </div>
               </header>
 
-        {/* Page Content */}
         <main className="p-4 md:p-6 lg:p-8 overflow-y-auto">
         <h2 className="text-gray-700 mb-4">
             Manage your Platform configuration and Preferences
@@ -192,7 +186,6 @@ export default function SettingsPage() {
               </TabsTrigger>
             </TabsList>
 
-            {/* General */}
             <TabsContent active={activeTab === "general"}>
               <Card>
                 <CardContent className="space-y-4 p-6">
@@ -227,7 +220,6 @@ export default function SettingsPage() {
               </Card>
             </TabsContent>
 
-            {/* Payment */}
             <TabsContent active={activeTab === "payment"}>
               <Card>
                 <CardContent className="space-y-4 p-6">
@@ -262,7 +254,6 @@ export default function SettingsPage() {
               </Card>
             </TabsContent>
 
-            {/* Security */}
             <TabsContent active={activeTab === "security"}>
               <Card>
                 <CardContent className="space-y-4 p-6">
@@ -293,3 +284,4 @@ export default function SettingsPage() {
     </div>
   );
 }
+
