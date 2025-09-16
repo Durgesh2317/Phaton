@@ -29,7 +29,6 @@ export default function ProductPage() {
 
   return (
     <div className="bg-gray-50 p-6">
-      
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 mb-8">
         <h1 className="text-xl font-extrabold text-blue-800">Phaton</h1>
         <h2 className="text-lg font-medium text-gray-700">Saved Products</h2>
@@ -100,4 +99,5 @@ export default function ProductPage() {
       </div>
     </div>
   );
+
 }
