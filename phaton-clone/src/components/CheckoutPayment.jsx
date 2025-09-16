@@ -81,7 +81,6 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -96,10 +95,9 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
         </div>
       </div>
 
-      {/* Progress Steps */}
+   
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8">
         <div className="flex items-center justify-between flex-wrap">
-          {/* Cart */}
           <div className="flex items-center space-x-2 w-full sm:w-auto mb-2 sm:mb-0">
             <div className="flex items-center justify-center w-8 h-8 bg-gray-800 text-white rounded-full text-sm">
               🛒
@@ -108,7 +106,7 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
             <div className="hidden sm:block flex-1 h-px bg-gray-300 mx-2"></div>
           </div>
 
-          {/* Information */}
+      
           <div className="flex items-center space-x-2 w-full sm:w-auto mb-2 sm:mb-0">
             <div className="flex items-center justify-center w-8 h-8 bg-gray-800 text-white rounded-full text-sm">
               📧
@@ -117,7 +115,6 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
             <div className="hidden sm:block flex-1 h-px bg-gray-300 mx-2"></div>
           </div>
 
-          {/* Payment */}
           <div className="flex items-center space-x-2 w-full sm:w-auto mb-2 sm:mb-0">
             <div className="flex items-center justify-center w-8 h-8 bg-gray-800 text-white rounded-full text-sm">
               <span className="-mt-1">💳</span>
@@ -126,7 +123,6 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
             <div className="hidden sm:block flex-1 h-px bg-gray-300 mx-2"></div>
           </div>
 
-          {/* Confirmation */}
           <div className="flex items-center space-x-2 w-full sm:w-auto">
             <div className="flex items-center justify-center w-8 h-8 bg-gray-300 text-gray-600 rounded-full text-sm">
               ✓
@@ -136,10 +132,9 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
         </div>
       </div>
 
-      {/* Main Section */}
+ 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Payment Form */}
           <div className="flex-1 bg-white shadow-sm rounded-lg p-6 border border-gray-400">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">
               Payment Method
@@ -207,7 +202,7 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
               </div>
             </form>
 
-            {/* Buttons */}
+          
             <div className="flex justify-between mt-8">
               <button
                 onClick={onBack}
@@ -218,7 +213,6 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
             </div>
           </div>
 
-          {/* Order Summary (Mobile) */}
           <div className="lg:hidden mb-6">
             <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-400">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -266,7 +260,6 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
             </div>
           </div>
 
-          {/* Order Summary (Desktop) */}
           <div className="hidden lg:block lg:w-80 flex-shrink-0">
             <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-400 top-24">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -314,7 +307,6 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
         </div>
       </div>
 
-      {/* Recommendations */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-24">
         <h2 className="text-xl font-semibold text-gray-900 mb-6">
           Recommendation
@@ -356,3 +348,4 @@ const CheckoutPayment = ({ onBack, onNext, onClose }) => {
 };
 
 export default CheckoutPayment;
+
