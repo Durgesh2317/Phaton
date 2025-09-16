@@ -28,7 +28,7 @@ import {
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Dummy Data
+  
   const revenueData = [
     { month: "Jul", revenue: 120 },
     { month: "Aug", revenue: 200 },
@@ -56,7 +56,6 @@ export default function Dashboard() {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      {/* Overlay for mobile */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 z-20 lg:hidden"
@@ -64,7 +63,6 @@ export default function Dashboard() {
         ></div>
       )}
 
-      {/* Sidebar */}
       <aside
         className={`fixed inset-y-0 left-0 z-30 w-64 bg-[#1F3446] text-white transform 
         ${sidebarOpen ? "translate-x-0" : "-translate-x-64"} 
@@ -105,9 +103,7 @@ export default function Dashboard() {
         </nav>
       </aside>
 
-      {/* Main content */}
       <div className="flex-1 flex flex-col lg:ml-64 overflow-hidden">
-        {/* Topbar */}
         <header className="flex items-center justify-between bg-white h-16 px-4 shadow-md sticky top-0 z-10">
           <div className="flex items-center gap-3">
             <button
@@ -120,7 +116,6 @@ export default function Dashboard() {
           </div>
 
           <div className="flex items-center gap-4">
-                      {/* Search (hidden on very small screens) */}
                       <div className="relative hidden sm:block">
                         <input
                           type="text"
@@ -136,7 +131,7 @@ export default function Dashboard() {
                             <span className="block font-semibold text-sm sm:text-base">
                               Divine I.
                             </span>
-                            {/* Email hidden on mobile */}
+                     
                             <span className="text-xs font-light text-gray-400 hidden sm:block">
                               divinei**@phaton.com
                             </span>
@@ -145,9 +140,7 @@ export default function Dashboard() {
           </div>
         </header>
 
-        {/* Page Content */}
         <main className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
-          {/* Stats Cards */}
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { title: "Total Sales", value: "$127,435", change: "+12%" },
@@ -174,7 +167,6 @@ export default function Dashboard() {
             ))}
           </section>
 
-          {/* Revenue & Categories */}
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white p-4 rounded-xl shadow">
               <h2 className="font-semibold mb-2">Revenue</h2>
@@ -220,7 +212,6 @@ export default function Dashboard() {
             </div>
           </section>
 
-          {/* Recent Orders */}
           <section>
             <div className="bg-white rounded-xl shadow p-4">
               <h2 className="font-semibold mb-3">Recent Orders</h2>
@@ -263,7 +254,6 @@ export default function Dashboard() {
             </div>
           </section>
 
-          {/* AI Recommendations */}
           <section>
             <div className="bg-white rounded-xl shadow p-4">
               <h2 className="flex items-center font-semibold mb-3">
@@ -316,3 +306,4 @@ export default function Dashboard() {
     </div>
   );
 }
+
