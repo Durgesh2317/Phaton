@@ -89,7 +89,6 @@ const CheckoutConfirmation = ({ onBack, onClose }) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -104,7 +103,7 @@ const CheckoutConfirmation = ({ onBack, onClose }) => {
         </div>
       </div>
 
-      {/* Progress Steps */}
+    
       <div className="max-w-7xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="flex items-center justify-between flex-wrap">
           {[
@@ -147,9 +146,8 @@ const CheckoutConfirmation = ({ onBack, onClose }) => {
         </div>
       </div>
 
-      {/* Main Content */}
+   
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 mt-10 mb-10">
-        {/* Success (Left) */}
         <div className="flex-1 flex items-center justify-center">
           <div className="bg-white shadow-lg rounded-lg p-8 text-center w-full border border-gray-300">
             <div className="flex justify-center mb-4">
@@ -197,7 +195,7 @@ const CheckoutConfirmation = ({ onBack, onClose }) => {
           </div>
         </div>
 
-        {/* Order Summary (Right) */}
+      
         <div className="lg:w-80 w-full">
           <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-400">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -242,12 +240,10 @@ const CheckoutConfirmation = ({ onBack, onClose }) => {
         </div>
       </div>
 
-     
-      {/* Recommendations */}
+ 
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-24">
   <h2 className="text-xl font-semibold text-gray-900 mb-6">Recommendation</h2>
   <div className="relative">
-    {/* Slider wrapper */}
     <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
       {getCurrentItems().map((item) => (
         <div
@@ -282,3 +278,4 @@ const CheckoutConfirmation = ({ onBack, onClose }) => {
 };
 
 export default CheckoutConfirmation;
+
